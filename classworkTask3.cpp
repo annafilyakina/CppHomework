@@ -39,6 +39,10 @@ int main()
     for (int i = 0; i < lines; i++) {
         array[i] = new int[columns];
     }
+    
+    int diagSum = 0;
+    for (int i = 0; i< min(lines,columns);i++){
+        diagSum += array[i][i];
 
     int** ptr = array;
     __filling(ptr, lines, columns);
@@ -48,5 +52,6 @@ int main()
   
     
     __cout(ptr, lines, columns);
+    std::cout<< "  diagonal summa = "<< diagSum;
 }
 
